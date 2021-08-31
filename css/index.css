@@ -1,3 +1,310 @@
 body{
-    background-color:yellow;
+    font-family:'SamsungOne',arial,sans-serif;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
+
+body:before {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    content: '';
+}
+
+.sticky #wrap {
+    overflow: visible;
+}
+
+.dotcom #wrap {
+    max-width: 100%;
+}
+
+#wrap {
+    position: relative;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1920px;
+    overflow: hidden;
+}
+
+/* styling header main part*/
+
+.gnb {
+    position: relative;
+    z-index: 2000;
+}
+
+.gnb__dimmed {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0;
+    z-index: 2000;
+    -webkit-transition: opacity .6s cubic-bezier(0.4,0,0.2,1) .2s;
+    transition: opacity .6s cubic-bezier(0.4,0,0.2,1) .2s;
+}
+
+.gnb__nav {
+    position: relative;
+    background: #fff;
+    z-index: 2000;
+}
+
+.gnb__bar {
+    max-width: 1440px;
+    height: 80px;
+    margin: 0 auto;
+    background: #fff;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.gnb__bar-inner {
+    padding: 0 24px 0 16px;
+    font-size: 0;
+}
+
+.gnb__bar-inner:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.gnb__logo {
+    float: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    height: 80px;
+}
+
+a {
+    color: #4b4c4c;
+    text-decoration: none;
+    outline-offset: -1px;
+    background-color: transparent;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a:-webkit-any-link {
+    /* color: -webkit-link; */
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.gnb__logo:after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 32px;
+    background: url(https://www.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-common/resources/images/global-samsung-logo.svg) no-repeat 50% 50%;
+    background-size: 104px 16px;
+}
+
+.gnb__main {
+    float: left;
+    margin-left: 8px;
+    font-size: 0;
+}
+
+.gnb__depth1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 80px;
+    line-height: 1.33;
+}
+
+li, ol, ul {
+    list-style: outside none none;
+}
+
+.gnb__depth1-menu {
+    vertical-align: middle;
+}
+
+.gnb__depth1-menu :hover{
+    color: #fff;
+    background-color: #010911;
+    border-color: #010911;
+}
+
+.gnb__depth1-link {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    padding: 7px 12px;
+    border-radius: 20px;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.33;
+}
+
+/* styling header sub part*/
+
+.gnb__sub {
+    float: right;
+    font-size: 0;
+}
+.gnb__sub .gnb__depth1 {
+    float: left;
+}
+
+.gnb__depth1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 80px;
+    line-height: 1.33;
+}
+
+.gnb__utility {
+    float: right;
+    margin-left: 36px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 80px;
+}
+
+.gnb__utility>li {
+    position: relative;
+}
+
+.gnb__utility>li>a, .gnb__utility>li>a svg.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.gnb__utility>li>a {
+    display: block;
+}
+
+.blind, .hidden, legend, table caption {
+    display: block;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    font-size: 1px;
+    line-height: 1px;
+    clip: rect(1px,1px,1px,1px);
+}
+
+.gnb__utility>li>a svg.icon {
+    pointer-events: none;
+}
+
+.gnb__utility>li>a, .gnb__utility>li>a svg.icon {
+    width: 24px;
+    height: 24px;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.gnb__utility .gnb__cart {
+    position: relative;
+}
+
+.gnb__utility>li+li {
+    margin-left: 24px;
+}
+
+.gnb__utility>li>a {
+    display: block;
+}
+
+.gnb__utility .gnb__login-layer {
+    visibility: hidden;
+    position: absolute;
+    top: 36px;
+    right: 0;
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    width: 216px;
+    padding: 8px 0;
+    background: #fff;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 4px 10px -2px rgb(0 0 0 / 20%);
+    box-shadow: 0 4px 10px -2px rgb(0 0 0 / 20%);
+    z-index: 2999;
+    opacity: 0;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    -webkit-transition: opacity .1s cubic-bezier(0.2,0.6,0.4,1),-webkit-transform .1s cubic-bezier(0.2,0.6,0.4,1);
+    transition: opacity .1s cubic-bezier(0.2,0.6,0.4,1),-webkit-transform .1s cubic-bezier(0.2,0.6,0.4,1);
+    transition: transform .1s cubic-bezier(0.2,0.6,0.4,1),opacity .1s cubic-bezier(0.2,0.6,0.4,1);
+    transition: transform .1s cubic-bezier(0.2,0.6,0.4,1),opacity .1s cubic-bezier(0.2,0.6,0.4,1),-webkit-transform .1s cubic-bezier(0.2,0.6,0.4,1);
+}
+
+.gnb__utility .gnb__login-layer .gnb__utility-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 24px;
+    padding: 8px 16px;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.33;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.gnb__utility .gnb__login-layer .gnb__utility-link .icon-wrap {
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    margin-right: 8px;
+}
+
+.gnb__utility .gnb__login-layer .gnb__utility-link .icon-wrap svg[class*='icon'] {
+    width: 100%;
+    height: 100%;
+}
+
+.gnb__utility .gnb__login-layer .active{
+    visibility:visible;
+    opacity:1;
+    -webkit-transform:scale(1);
+    transform:scale(1)
+}
+
+.active{
+    visibility:visible !important;
+    opacity:1 !important;
+    -webkit-transform:scale(1) !important;
+    transform:scale(1) !important
+}
+
