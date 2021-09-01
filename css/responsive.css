@@ -1,0 +1,123 @@
+/* responsive */
+
+@media only screen and (max-width: 1279px) {
+    .gnb__bar {
+        height: 56px;
+    }
+
+    .gnb__bar-inner {
+        padding: 8px 16px;
+    }
+
+    .gnb__logo {
+        height: auto;
+        margin-top: 4px;
+    }
+
+    .gnb__mobile-menu {
+        display: block;
+        float: right;
+        font-size: 0;
+    }
+  }
+
+  @media only screen and (max-width: 767px){
+
+    .floating-navigation--mobile-scroll.floating-navigation:after {
+        height: 77px !important;
+    }
+
+    .floating-navigation--mobile-scroll .floating-navigation__wrap {
+        height: 77px !important;
+    }
+
+    .floating-navigation--mobile-scroll .floating-navigation__header {
+        height: 43px !important;
+    }    
+  }
+
+  @media only screen and (max-width: 767px){
+    .floating-navigation__header {
+        display: table;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+  }
+
+  @media only screen and (max-width: 767px){
+    .floating-navigation--mobile-scroll .floating-navigation__menu {
+        overflow: hidden;
+        position: absolute;
+        top: auto;
+        height: 34px;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+    .floating-navigation--mobile-scroll .floating-navigation__menu-list {
+        margin: 0;
+    }
+
+    .floating-navigation__menu-list {
+        display: block;
+        padding: 0;
+    }
+
+    .floating-navigation--mobile-scroll .floating-navigation__menu-item {
+        display: table-cell;
+        height: 34px;
+        margin-top: 0;
+        border: 0 none;
+        padding: 2px 0;
+        background: transparent !important;
+    }
+  }
+
+  @media only screen and (max-width: 1012px){
+    .title-article {
+        margin-bottom: 6px;
+        font-size: 20px;
+        font-weight: bold !important;
+    }
+
+    .wrap-article{
+        margin-top: -50px !important;
+    }
+
+    .header-article{
+        margin: 47px 0 49px;
+    }
+
+    .btn-buyNow {
+        margin-top: 35px;
+        position: relative;
+        top: auto;
+        text-align: center;
+    }
+
+    .order-button-buy{
+        height: 50px;
+        min-width: 184px;
+    }
+
+    .phn-img_container{
+        margin: -30px 0 0 -719px;
+    }
+
+    .show{
+        opacity: 1;
+        transition: opacity .3s;
+        position: relative;
+        display: block;
+        width: auto;
+        left: auto;
+        text-align: center;
+    }
+  }
+
+  
+
